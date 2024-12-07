@@ -32,10 +32,10 @@ const Blog = ({ blog, addLike, deleteBlog, user }) => {
     }
   }
   return (
-    <div style={blogStyle}>
+    <div style={blogStyle} className='blog'>
       {blog.title} {blog.author}
       <button onClick={toggleVisibility}>{buttonLabel}</button>
-      <div style={showWhenVisible}>
+      <div style={showWhenVisible} className='extraInfo'>
         {blog.url}
         <div>likes {blog.likes} <button onClick={updateBLog}>like</button> </div>
         {blog.user.username}
@@ -45,9 +45,6 @@ const Blog = ({ blog, addLike, deleteBlog, user }) => {
   )
 }
 Blog.propTypes = {
-  blog: PropTypes.object.isRequired,
-  addLike: PropTypes.func.isRequired,
-  deleteBlog: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired,
+  blog: PropTypes.object.isRequired
 }
 export default Blog
