@@ -28,7 +28,7 @@ const App = () => {
     blogService.getAll().then(blogs =>
       setBlogs( blogs )
     )
-  }, [])
+  }, [user, blogs])
 
 
   const addBLog = (blogObject) => {
@@ -125,7 +125,7 @@ const App = () => {
           {blogForm()}
         </div>
       }
-      <div>
+      <div data-testid='blog-list'>
         {blogs !== null? blogs.sort((ob1, ob2) => ob2.likes - ob1.likes).map(blog =>
           <Blog key={blog.id} blog={blog} addLike={addLike} deleteBlog={deleteBlog} user={user}/>
         ): <p>no data</p>}

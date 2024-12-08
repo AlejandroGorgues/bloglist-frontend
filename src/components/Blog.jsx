@@ -12,7 +12,7 @@ const Blog = ({ blog, addLike, deleteBlog, user }) => {
   const [visible, setVisible] = useState(false)
 
   const showWhenVisible = { display: visible ? '' : 'none' }
-  const showIfSameUser = { display: user.userId === blog.user.id ? '' : 'none' }
+  const showIfSameUser = { display: user.userId === blog.user.userId ? '' : 'none' }
   const buttonLabel = visible ? 'hide' : 'view'
 
   const toggleVisibility = () => {
