@@ -3,9 +3,10 @@ This repository contains the code to run the frontend related to the bloglist pr
 
 More specifically, this code is used by the frontend repository to manipulate blogs entries with the backend.
 
-The functionality of the whole project are:
+Features of the whole project are:
 * Login with a user (user creation not implemented).
 * Create blogs.
 * Visualize associated notes to the user.
+* Remove blogs.
 ## Extra
 * The link to the backend repository is [here](https://github.com/AlejandroGorgues/bloglist-backend).
